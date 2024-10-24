@@ -1,0 +1,54 @@
+.dropdown-button svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.icon-rotate {
+  transform: rotate(90deg);
+}
+
+.dropdown {
+  margin-right: 10px;
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 6px;
+  z-index: 1;
+  transform: translateY(10px);
+  transition: bottom 0.3s linear;
+}
+
+.dropdown.show .dropdown-menu {
+  transform: translateY(0);
+}
+
+.dropdown-menu button {
+  font-size: 14px;
+  background-color: #ffff00;
+  border: 2px solid #c2c213;
+  border-radius: 6px;
+  width: 100px;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.dropdown-menu button:last-child {
+  margin-bottom: 20px;
+}
+
+@keyframes animation {
+  from {
+    bottom: -60px
+  }
+  to {
+    bottom: 20px
+  }
+}
